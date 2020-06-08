@@ -6,6 +6,9 @@
     "dependencies": {
         "imagekit": "^3.0.5"
     },
+    "devDependencies": {
+        "eslint": "^7.2.0"
+    }
     "author": {
         "name": "Denis Šaško",
         "email": "denissasko@gmail.com",
@@ -30,8 +33,5 @@
     "strapi": {
         "isProvider": true
     },
-    "license": "MIT",
-    "devDependencies": {
-        "eslint": "^7.2.0"
-    }
+    "license": "MIT"
 }
