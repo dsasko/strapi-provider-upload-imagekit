@@ -8,7 +8,7 @@ Your configuration is passed down to the cloudinary configuration. (e.g: `cloudi
 
 `./extensions/upload/config/settings.json`
 
-```json
+```jsonc
 {
   "provider": "imagekit",
   "providerOptions": {
