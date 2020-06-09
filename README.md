@@ -8,18 +8,18 @@ Current version
 Compatible with
 ![Strapi v3.0.1](https://img.shields.io/badge/Strapi_version-3.0.1-956fff "Strapi v3.0.1")
 
-## Instalation
+## Installation
 
 **1. Install via npm or yarn**
 
 ```
-npm install strapi-provider-upload-aws-s3 --save
+npm install strapi-provider-upload-imagekit --save
 ```
 
 or
 
 ```
-yarn add strapi-provider-upload-aws-s3
+yarn add strapi-provider-upload-imagekit
 ```
 
 **2. Add or modify the plugins configuration file**
