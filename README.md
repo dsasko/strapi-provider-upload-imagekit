@@ -1,36 +1,58 @@
 # strapi-provider-upload-imagekit
 
-## Configurations
+ImageKit provider for strapi upload
 
-Your configuration is passed down to the cloudinary configuration. (e.g: `cloudinary.config(config)`). You can see the complete list of options [here](https://cloudinary.com/documentation/cloudinary_sdks#configuration_parameters)
+## Instalation
 
-**Example**
-
-`./extensions/upload/config/settings.json`
-
-```jsonc
-{
-  "provider": "imagekit",
-  "providerOptions": {
-    "publicKey": "publicKey",  // put your publicKey here
-    "privateKey": "privateKey", // put your privateKey here
-    "urlEndpoint": "urlEndPoint", // put your urlEndpoint
-    "params": {  // optional section
-      "folder": "/production/images" // folder location in imagekit.  Defaults to "/" if value is not supplied
-    }
-  }
-}
+**1. Install via npm or yarn**
 
 ```
+npm install strapi-provider-upload-aws-s3 --save
+```
 
-ImageKit provider for strapi upload
+or
+
+```
+yarn add strapi-provider-upload-aws-s3
+```
+
+**2. Add or modify the plugins configuration file**
+
+Global configuration file is located in `./config/plugins.js`
+
+Environment configuration files are located in `./config/env/{env}/plugins.js`
+
+**3. Add your configuration**
+
+Example code:
+
+```
+module.exports = ({ env }) => ({
+  upload: {
+    provider: "imagekit",
+    providerOptions: {
+      publicKey: "publicKey",  // put your publicKey here
+      privateKey: "privateKey", // put your privateKey here
+      urlEndpoint: "urlEndPoint", // put your urlEndpoint
+      params: {  // optional section
+        folder: "/production/images" // folder location in imagekit.  Defaults to "/" if value is not supplied
+      }
+    }
+  }
+});
+```
+
+For a more detailed and updated documentation on upload providers, please visit [The official documentation](https://strapi.io/documentation/v3.x/plugins/upload.html#using-a-provider)
 
 ## Resources
 
 - [MIT License](LICENSE.md)
 
 ## Links
-
 - [Strapi website](http://strapi.io/)
 - [Strapi community on Slack](http://slack.strapi.io)
 - [Strapi news on Twitter](https://twitter.com/strapijs)
+
+## Imagekit links
+- [Imagekit node library](https://www.npmjs.com/package/imagekit)
+- [Imagekit API Docs](https://docs.imagekit.io/api-reference/api-introduction)
