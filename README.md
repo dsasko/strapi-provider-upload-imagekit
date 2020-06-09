@@ -2,6 +2,12 @@
 
 ImageKit provider for strapi upload
 
+Current version 
+![version v0.2.0](https://img.shields.io/badge/Version-0.2.0-956fff "version v0.2.0")
+
+Compatible with
+![Strapi v3.0.1](https://img.shields.io/badge/Strapi_version-3.0.1-956fff "Strapi v3.0.1")
+
 ## Instalation
 
 **1. Install via npm or yarn**
@@ -31,10 +37,10 @@ module.exports = ({ env }) => ({
   upload: {
     provider: "imagekit",
     providerOptions: {
-      publicKey: "publicKey",  // put your publicKey here
+      publicKey: "publicKey", // put your publicKey here
       privateKey: "privateKey", // put your privateKey here
       urlEndpoint: "urlEndPoint", // put your urlEndpoint
-      params: {  // optional section
+      params: { // optional section
         folder: "/production/images" // folder location in imagekit.  Defaults to "/" if value is not supplied
       }
     }
