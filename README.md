@@ -48,7 +48,7 @@ module.exports = ({ env }) => ({
 });
 ```
 
-For a more detailed and updated documentation on upload providers, please visit [The official documentation](https://strapi.io/documentation/v3.x/plugins/upload.html#using-a-provider)
+For a more detailed and updated documentation on upload providers, please visit [the official documentation](https://strapi.io/documentation/v3.x/plugins/upload.html#using-a-provider).
 
 ## Resources
 
