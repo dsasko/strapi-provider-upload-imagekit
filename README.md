@@ -26,7 +26,7 @@ Environment configuration files are located in `./config/env/{env}/plugins.js`
 
 Example code:
 
-```
+```js
 module.exports = ({ env }) => ({
   upload: {
     provider: "imagekit",
