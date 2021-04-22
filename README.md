@@ -1,10 +1,10 @@
 # strapi-provider-upload-imagekit
-![version v0.2.1](https://img.shields.io/badge/Version-0.2.1-956fff "version v0.2.1")
+![version v0.2.3](https://img.shields.io/badge/Version-0.2.3-956fff "version v0.2.3")
 ![Strapi v3.6.0](https://img.shields.io/badge/Strapi_version-3.6.0-956fff "Strapi v3.6.0")
 
 ImageKit provider for strapi upload
 
-- Current version: `0.2.2`
+- Current version: `0.2.3`
 - Compatible with Strapi version: `3.6.0`
 
 ## Installation
