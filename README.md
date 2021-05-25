@@ -36,11 +36,13 @@ module.exports = ({ env }) => ({
   upload: {
     provider: "imagekit",
     providerOptions: {
-      publicKey: "publicKey", // put your publicKey here
-      privateKey: "privateKey", // put your privateKey here
-      urlEndpoint: "urlEndPoint", // put your urlEndpoint
-      params: { // optional section
-        folder: "/production/images" // folder location in imagekit.  Defaults to "/" if value is not supplied
+      publicKey: "publicKey",
+      privateKey: "privateKey",
+      urlEndpoint: "urlEndPoint",
+      // Optional
+      params: {
+        // Defaults to "/" if value is not supplied
+        folder: "/production/images"
       }
     }
   }
