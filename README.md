@@ -5,7 +5,8 @@
 ImageKit provider for strapi upload
 
 - Current version: `0.2.5`
-- Compatible with Strapi version: `3.6.0`
+- Compatible with Strapi version: `^3.6.0`
+  - Latest tested version `3.6.6`
 
 ## Installation
 
@@ -26,6 +27,8 @@ yarn add strapi-provider-upload-imagekit
 Global configuration file is located in `./config/plugins.js`
 
 Environment configuration files are located in `./config/env/{env}/plugins.js`
+
+For more information please check the [official documentation](https://strapi.io/documentation/developer-docs/latest/development/plugins/upload.html#using-a-provider).
 
 **3. Add your configuration**
 
