@@ -28,7 +28,7 @@ Global configuration file is located in `./config/plugins.js`
 
 Environment configuration files are located in `./config/env/{env}/plugins.js`
 
-For more information please check the [official documentation](https://strapi.io/documentation/developer-docs/latest/development/plugins/upload.html#using-a-provider).
+For more information please check the [official documentation](https://docs-v3.strapi.io/developer-docs/latest/development/plugins/upload.html#using-a-provider).
 
 **3. Add your configuration**
 
