@@ -1,12 +1,13 @@
 # strapi-provider-upload-imagekit
-![version v0.2.5](https://img.shields.io/badge/Version-0.2.5-956fff "version v0.2.5")
-![Strapi v3.6.0](https://img.shields.io/badge/Strapi_version-3.6.0-956fff "Strapi v3.6.0")
+![version v4.0.0](https://img.shields.io/badge/Version-4.0.0-956fff "version v4.0.0")
 
-ImageKit provider for strapi upload
+## Notes
+### ImageKit provider for the Strapi Upload plugin
+- Current version: `4.0.0`
+- Compatible with Strapi version: `^4.0.0`
+  - Latest tested version `4.0.0`
 
-- Current version: `0.2.5`
-- Compatible with Strapi version: `^3.6.0`
-  - Latest tested version `3.6.6`
+For Strapi `v3` please use `v0.2.5` of this provider.
 
 ## Installation
 
@@ -28,39 +29,61 @@ Global configuration file is located in `./config/plugins.js`
 
 Environment configuration files are located in `./config/env/{env}/plugins.js`
 
-For more information please check the [official documentation](https://docs-v3.strapi.io/developer-docs/latest/development/plugins/upload.html#using-a-provider).
+For more information please check the [official documentation](https://docs.strapi.io/developer-docs/latest/plugins/upload.html#using-a-provider).
 
 **3. Add your configuration**
 
-Example code:
+Example `./config/plugins.js`:
 
 ```js
 module.exports = ({ env }) => ({
   upload: {
-    provider: "imagekit",
-    providerOptions: {
-      publicKey: "publicKey",
-      privateKey: "privateKey",
-      urlEndpoint: "urlEndPoint",
-      // Optional
-      params: {
-        // Defaults to "/" if value is not supplied
-        folder: "/production/images"
+    config: {
+      provider: "strapi-provider-upload-imagekit",  // Community providers need to have the full package name
+      providerOptions: {
+        publicKey: "publicKey",
+        privateKey: "privateKey",
+        urlEndpoint: "urlEndPoint",  // Example: https://ik.imagekit.io/username
+
+        // Optional
+        params: {
+          folder: "/production/images"  // Defaults to "/" if value is not supplied
+        }
       }
     }
   }
 });
 ```
 
-For a more detailed and updated documentation on upload providers, please visit [the official documentation](https://strapi.io/documentation/v3.x/plugins/upload.html#using-a-provider).
+**4. Setting up `strapi::security` middlewares to prevent `contentSecurityPolicy` URL blocking**
+
+Modify `./config/middleware.js`:
+
+```js
+// ...
+{
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': ["'self'", 'data:', 'blob:', 'ik.imagekit.io'],
+          'media-src': ["'self'", 'data:', 'blob:', 'ik.imagekit.io'],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+},
+// ...
+```
 
 ## Resources
-
 - [MIT License](LICENSE.md)
 
 ## Links
 - [Strapi website](http://strapi.io/)
-- [Strapi community on Slack](http://slack.strapi.io)
+- [Strapi community on Discord](https://discord.strapi.io/)
 - [Strapi news on Twitter](https://twitter.com/strapijs)
 
 ## Imagekit links
