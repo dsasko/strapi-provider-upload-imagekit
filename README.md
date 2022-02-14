@@ -3,11 +3,13 @@
 
 ## Notes
 ### ImageKit provider for the Strapi Upload plugin
-- Current version: `4.0.0`
+- Current version: `4.0.1`
 - Compatible with Strapi version: `^4.0.0`
-  - Latest tested version `4.0.0`
+  - Latest tested version `4.0.7`
 
-For Strapi `v3` please use `v0.2.5` of this provider.
+:exclamation: `MAYOR` and `MINOR` versions of the provider are representing compatability with Strapi, while the `PATCH` version is used to denote changes in the provider itself.
+
+:exclamation: For Strapi `v3` please use `v0.2.5` of this provider.
 
 ## Installation
 
