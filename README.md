@@ -1,13 +1,16 @@
-# strapi-provider-upload-imagekit
+ImageKit provider for the Strapi Upload plugin
+- Current version: `5.10.0`
+- Compatible with Strapi version: `^5.10.0`
+  - Latest tested version `5.10.1`
 
-## ImageKit provider for the Strapi Upload plugin
-- Current version: `4.25.0`
-- Compatible with Strapi version: `^4.0.0`
-  - Latest tested version `4.25.6`
+> [!IMPORTANT]
+> `MAYOR` and `MINOR` versions of the provider are representing compatability with Strapi, while the `PATCH` version is used to denote changes in the provider itself.
 
-:exclamation: `MAYOR` and `MINOR` versions of the provider are representing compatability with Strapi, while the `PATCH` version is used to denote changes in the provider itself.
+> [!TIP]
+> For Strapi `v3` please use `v0.2.5` of this provider.
 
-:exclamation: For Strapi `v3` please use `v0.2.5` of this provider.
+> [!TIP]
+> For Strapi `v4` please use `v4.25.0` of this provider.
 
 ## Installation
 
@@ -31,7 +34,19 @@ Environment configuration files are located in `./config/env/{env}/plugins.js`
 
 For more information please check the [official documentation](https://docs.strapi.io/developer-docs/latest/plugins/upload.html#using-a-provider).
 
-**3. Add your configuration**
+**3. Define global variables**
+
+Example `.env`:
+
+```dotenv
+IMAGEKIT_PUBLIC_KEY=ed6445336472aef39084720adcf903b9
+IMAGEKIT_PRIVATE_KEY=afbca80df2ec032de664aefb3a8579b7
+IMAGEKIT_URL_ENDPOINT=https://ik.imagekit.io/username
+IMAGEKIT_FOLDER=/production/images
+IMAGEKIT_BASE_URL=ik.imagekit.io
+```
+
+**4. Add plugin configuration**
 
 Example `./config/plugins.js`:
 
@@ -41,13 +56,13 @@ module.exports = ({ env }) => ({
     config: {
       provider: "strapi-provider-upload-imagekit",  // Community providers need to have the full package name
       providerOptions: {
-        publicKey: "publicKey",
-        privateKey: "privateKey",
-        urlEndpoint: "urlEndPoint",  // Example: https://ik.imagekit.io/username
+        publicKey: env('IMAGEKIT_PUBLIC_KEY'),
+        privateKey: env('IMAGEKIT_PRIVATE_KEY'),
+        urlEndpoint: env('IMAGEKIT_URL_ENDPOINT'),
 
         // Optional
         params: {
-          folder: "/production/images"  // Defaults to "/" if value is not supplied
+            folder: env('IMAGEKIT_FOLDER'),
         }
       }
     }
@@ -55,34 +70,35 @@ module.exports = ({ env }) => ({
 });
 ```
 
-**4. Setting up `strapi::security` middlewares to prevent `contentSecurityPolicy` URL blocking**
+**5. Setting up `strapi::security` middlewares to prevent `contentSecurityPolicy` URL blocking**
 
 Modify `./config/middleware.js`:
 
 ```js
-// ...
-{
-    name: 'strapi::security',
-    config: {
-      contentSecurityPolicy: {
-        useDefaults: true,
-        directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'ik.imagekit.io'],
-          'media-src': ["'self'", 'data:', 'blob:', 'ik.imagekit.io'],
-          upgradeInsecureRequests: null,
+module.exports = ({ env }) => [
+    // ...
+    {
+        name: 'strapi::security',
+        config: {
+            contentSecurityPolicy: {
+                useDefaults: true,
+                directives: {
+                    'connect-src': ["'self'", 'https:'],
+                    'img-src': ["'self'", 'data:', 'blob:', env('IMAGEKIT_BASE_URL')],
+                    'media-src': ["'self'", 'data:', 'blob:', env('IMAGEKIT_BASE_URL')],
+                    upgradeInsecureRequests: null,
+                },
+            },
         },
-      },
     },
-},
-// ...
+]
 ```
 
 ## Resources
 - [MIT License](LICENSE.md)
 
 ## Links
-- [Strapi website](http://strapi.io/)
+- [Strapi website](https://strapi.io/)
 - [Strapi community on Discord](https://discord.strapi.io/)
 - [Strapi news on Twitter](https://twitter.com/strapijs)
 
