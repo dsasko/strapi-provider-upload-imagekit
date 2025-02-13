@@ -1,13 +1,13 @@
 {
   "name": "strapi-provider-upload-imagekit",
-  "description": "ImageKit provider for strapi upload",
+  "description": "ImageKit provider for Strapi CMS",
   "version": "4.25.0",
   "main": "./lib",
   "dependencies": {
     "imagekit": "6.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.2.0"
+    "eslint": "^7.32.0"
   },
   "author": {
     "name": "Denis Šaško",
@@ -20,8 +20,8 @@
     "strapi"
   ],
   "engines": {
-    "node": ">=18.x.x",
-    "npm": ">=9.x.x"
+    "node": ">=22.x.x",
+    "npm": ">=10.x.x"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,6 @@
   "strapi": {
     "isProvider": true
   },
+  "homepage": "https://strapi.io",
   "license": "MIT"
 }
