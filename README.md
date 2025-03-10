@@ -51,7 +51,7 @@ IMAGEKIT_BASE_URL=ik.imagekit.io
 Example `./config/plugins.js`:
 
 ```js
-module.exports = ({ env }) => ({
+export default ({env}) => ({
   upload: {
     config: {
       provider: "strapi-provider-upload-imagekit",  // Community providers need to have the full package name
@@ -75,7 +75,7 @@ module.exports = ({ env }) => ({
 Modify `./config/middleware.js`:
 
 ```js
-module.exports = ({ env }) => [
+export default ({env}) => ([
     // ...
     {
         name: 'strapi::security',
@@ -91,7 +91,7 @@ module.exports = ({ env }) => [
             },
         },
     },
-]
+]);
 ```
 
 ## Resources
