@@ -20,8 +20,8 @@
     "strapi"
   ],
   "engines": {
-    "node": ">=22.x.x",
-    "npm": ">=10.x.x"
+    "node": ">=18.0.0",
+    "npm": ">=6.0.0"
   },
   "repository": {
     "type": "git",
