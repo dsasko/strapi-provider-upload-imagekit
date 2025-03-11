@@ -1,7 +1,7 @@
 {
   "name": "strapi-provider-upload-imagekit",
   "description": "ImageKit provider for Strapi CMS",
-  "version": "5.11.2",
+  "version": "5.11.3",
   "main": "./lib",
   "dependencies": {
     "imagekit": "6.0.0"
