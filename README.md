@@ -1,5 +1,5 @@
 ImageKit provider for the Strapi Upload plugin
-- Current version: `5.11.0`
+- Current version: `5.11.1`
 - Compatible with Strapi version: `^5.11.0`
   - Latest tested version `5.11.0`
 
