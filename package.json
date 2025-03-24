@@ -3,6 +3,10 @@
   "description": "ImageKit provider for Strapi CMS",
   "version": "5.11.4",
   "main": "./lib",
+  "scripts": {
+    "release": "release-it",
+    "lint": "eslint ./lib"
+  },
   "dependencies": {
     "imagekit": "6.0.0"
   },
@@ -11,16 +15,6 @@
     "eslint": "^7.32.0",
     "release-it": "^18.1.2"
   },
-  "author": {
-    "name": "Denis Šaško",
-    "email": "denissasko@gmail.com",
-    "url": "https://dsasko.github.io/"
-  },
-  "keywords": [
-    "upload",
-    "imagekit",
-    "strapi"
-  ],
   "engines": {
     "node": "^18 || ^20",
     "npm": ">=6.0.0"
@@ -32,13 +26,19 @@
   "bugs": {
     "url": "https://github.com/dsasko/strapi-provider-upload-imagekit/issues"
   },
+  "author": {
+    "name": "Denis Šaško",
+    "email": "denissasko@gmail.com",
+    "url": "https://dsasko.github.io/"
+  },
+  "keywords": [
+    "upload",
+    "imagekit",
+    "strapi"
+  ],
+  "homepage": "https://strapi.io",
   "strapi": {
     "isProvider": true
   },
-  "homepage": "https://strapi.io",
-  "license": "MIT",
-  "scripts": {
-    "release": "release-it",
-    "lint": "eslint ./lib"
-  }
+  "license": "MIT"
 }

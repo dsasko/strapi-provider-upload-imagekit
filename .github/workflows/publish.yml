@@ -1,0 +1,31 @@
+name: Publish package
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Initialize Git user
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email ""
+      - name: Initialize NPM config
+        run: npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish package
+        run: npx release-it --dry-run --ci
+      - name: Finalize
+        run: echo "Done"
