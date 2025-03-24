@@ -1,7 +1,4 @@
 ImageKit provider for the Strapi Upload plugin
-- Current version: `5.11.4`
-- Compatible with Strapi version: `^5.11.0`
-  - Latest tested version `5.11.0`
 
 > [!IMPORTANT]
 > `MAYOR` and `MINOR` versions of the provider are representing compatability with Strapi, while the `PATCH` version is used to denote changes in the provider itself.
