@@ -7,7 +7,9 @@
     "imagekit": "6.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0"
+    "@release-it/conventional-changelog": "^10.0.0",
+    "eslint": "^7.32.0",
+    "release-it": "^18.1.2"
   },
   "author": {
     "name": "Denis Šaško",
@@ -36,7 +38,7 @@
   "homepage": "https://strapi.io",
   "license": "MIT",
   "scripts": {
-  "license": "MIT"
+    "release": "release-it",
     "lint": "eslint ./lib"
   }
 }
