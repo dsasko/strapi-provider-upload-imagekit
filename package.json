@@ -34,5 +34,9 @@
     "isProvider": true
   },
   "homepage": "https://strapi.io",
+  "license": "MIT",
+  "scripts": {
   "license": "MIT"
+    "lint": "eslint ./lib"
+  }
 }
