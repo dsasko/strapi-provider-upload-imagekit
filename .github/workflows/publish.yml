@@ -29,3 +29,5 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish package
         run: if npx should-semantic-release ; then npx release-it --ci ; fi
+        env:
+          NPM_TOKEN: ${{ secrets.GH_TOKEN }}
