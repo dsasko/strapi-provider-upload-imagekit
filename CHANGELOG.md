@@ -1,5 +1,12 @@
 # Changelog
 
+## 5.11.10 (2025-03-25)
+
+
+### Bug Fixes
+
+* readme updated to test autopublishing feature ([704d4a5](https://github.com/dsasko/strapi-provider-upload-imagekit/commit/704d4a5ee78e36e964004a0a1ee4cbb952233a83))
+
 ## 5.11.9 (2025-03-25)
 
 
