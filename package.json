@@ -17,7 +17,7 @@
     "should-semantic-release": "^0.3.1"
   },
   "engines": {
-    "node": "^18 || ^20",
+    "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "repository": {
