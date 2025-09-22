@@ -13,11 +13,11 @@
   "devDependencies": {
     "@release-it/conventional-changelog": "^10.0.0",
     "eslint": "^7.32.0",
-    "release-it": "^18.1.2",
+    "release-it": "^19.0.2",
     "should-semantic-release": "^0.3.1"
   },
   "engines": {
-    "node": "^18 || ^20",
+    "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "repository": {
