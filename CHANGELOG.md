@@ -1,5 +1,12 @@
 # Changelog
 
+## 5.11.11 (2025-09-22)
+
+
+### Bug Fixes
+
+* blank commit for version bumb ([64d6669](https://github.com/dsasko/strapi-provider-upload-imagekit/commit/64d66694a7b89d467b94568fea27b892d6ad585e))
+
 ## 5.11.10 (2025-03-25)
 
 
