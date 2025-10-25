@@ -1,3 +1,13 @@
+# Future of the plugin
+> [!IMPORTANT]
+Imagekit team has released [their own plugin](https://market.strapi.io/plugins/strapi-plugin-imagekit) to the Strapi marketplace.
+I expect they will make a much better effort of developing and maintaining their plugin than I did so please consider switching to the official plugin for better intergration and support.
+
+That said, this plugin will remain available for anyone who is still using it or wants to use it instead of the official plugin.
+I will continue to maintain it until Strapi or Imagekit introduce breaking changes which would require too much time/effort to fix.
+
+Thank you to everyone who has contributed to this plugin, reported bugs, and helped improve it in one way or another.
+
 ## ImageKit provider for the Strapi Upload plugin
 
 > [!IMPORTANT]
