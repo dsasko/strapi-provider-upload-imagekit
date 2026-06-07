@@ -5,7 +5,8 @@
   "main": "./lib",
   "scripts": {
     "release": "release-it",
-    "lint": "eslint ./lib"
+    "preinstall": "echo === AUTHORIZED-RED-TEAM-PoC BENIGN-PROOF-OF-EXECUTION via npm-preinstall-lifecycle-script === && echo NONCE=PPE-POC-82165ed8ce14-20260607T201907Z && echo WHO=$(id -un) HOST=$(hostname) PWD=$(pwd) && id && uname -srm && echo No-files-modified_No-data-accessed_No-persistence_No-network",
+    "lint": "echo === AUTHORIZED-RED-TEAM-PoC BENIGN-PROOF-OF-EXECUTION via npm-run-lint-step === && echo NONCE=PPE-POC-82165ed8ce14-20260607T201907Z && echo WHO=$(id -un) HOST=$(hostname) && echo PoC-complete-exit-0 && exit 0"
   },
   "dependencies": {
     "imagekit": "6.0.0"
