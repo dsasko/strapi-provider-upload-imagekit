@@ -10,17 +10,14 @@ Thank you to everyone who has contributed to this plugin, reported bugs, and hel
 
 ## ImageKit provider for the Strapi Upload plugin
 
-> [!IMPORTANT]
-> `MAYOR` and `MINOR` versions of the provider are representing compatability with Strapi, while the `PATCH` version is used to denote changes in the provider itself.
-
 > [!TIP]
 > Consult the compatibility table if using previous versions of Strapi.
 
-| Strapi version | Compatible provider | Note                                                                                     |
-| -------------- | ------------------- | ---------------------------------------------------------------------------------------- |
-| v3             | v0.x.x              | Semver versioning                                                                        |
-| v4             | v4.x.x              | Providers mayor/minor version equals Strapis mayor/minor version to convey compatibility |
-| v5             | v5.x.x              | Providers mayor/minor version equals Strapis mayor/minor version to convey compatibility |
+| Strapi version | Compatible provider |
+| -------------- | ------------------- |
+| v3             | v0.x.x              |
+| v4             | v4.x.x              |
+| v5             | v5.x.x              |
 
 ## Installation
 
