@@ -4,7 +4,8 @@
     "commitMessage": "Release v${version}"
   },
   "npm": {
-    "release": true
+    "release": true,
+    "skipChecks": true
   },
   "github": {
     "release": true,
