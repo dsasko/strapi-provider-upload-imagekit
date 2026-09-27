@@ -1,5 +1,11 @@
 # Changelog
 
+## 5.11.13 (2026-09-27)
+
+### Bug Fixes
+
+* lint ([98c37ed](https://github.com/dsasko/strapi-provider-upload-imagekit/commit/98c37ed38849825ee6d040220d86dad9255fbe64))
+
 ## 5.11.12 (2026-09-27)
 
 ### Bug Fixes
