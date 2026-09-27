@@ -1,4 +1,11 @@
 # Changelog
+
+## 5.11.12 (2026-09-27)
+
+### Bug Fixes
+
+* release-it checks failing ([eb2443d](https://github.com/dsasko/strapi-provider-upload-imagekit/commit/eb2443de79828675df357e07303eb04accd8853d))
+
 ## 5.11.10 (2025-03-25)
 
 
